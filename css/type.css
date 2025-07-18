@@ -1,0 +1,96 @@
+/* Adjust the .typing-text area */
+.typing-text {
+  overflow: hidden;
+  max-height: 256px;
+}
+.typing-text p {
+  font-size: 21px;
+  text-align: justify;
+  letter-spacing: 1px;
+  word-break: break-all;
+  font-weight:500;
+}
+.typing-text p span {
+  position: relative;
+}
+.typing-text p span.correct {
+  color: #56964f;
+}
+.typing-text p span.incorrect {
+  color: #cb3439;
+  outline: 1px solid #fff;
+  background: #ffc0cb;
+  border-radius: 4px;
+}
+.typing-text p span.active {
+  color: #17A2B8;
+}
+.typing-text p span.active::before {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  border-radius: 5px;
+  background: #17A2B8;
+  animation: blink 1s ease-in-out infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Adjusting the layout for Bootstrap */
+.result-details li p, .result-details li span {
+  font-size: 19px;
+}
+
+.d-flex ul.result-details {
+  flex-wrap: wrap;
+}
+
+.content button {
+  width: 105px;
+  color: #fff;
+  padding: 8px 0;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  background: #17A2B8;
+  transition: transform 0.3s ease;
+}
+
+.content button:active {
+  transform: scale(0.97);
+}
+.input-field {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+/* Custom shadow for the card */
+.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Creates a soft shadow */
+  transition: all 0.3s ease; /* Adds a smooth transition when hovered */
+opacity: none;}
+
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Intensifies the shadow on hover */
+}
+/* Custom shadow for the container */
+.container {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); /* Adds a soft shadow around the container */
+  padding: 20px; /* Adds some spacing inside the container */
+  background-color: #fff; /* Ensures the background is white to make the shadow more visible */
+  border-radius: 10px; /* Rounds the corners slightly */
+  transition: box-shadow 0.3s ease; /* Adds a smooth transition effect */
+opacity: 0.9;}
+
+.container:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); /* Increases the shadow on hover */
+}
+

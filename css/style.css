@@ -1,0 +1,637 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Oxanium:wght@200;300;400;500;600;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+button {
+    transition: background-color 0.3s ease-in-out;
+}
+.nav-bar {
+    opacity: 1; /* Ensure the navbar is fully visible */
+    transition: opacity 0.5s ease-in-out; /* Add a smooth transition */
+}
+[data-aos] {
+    opacity: 0; /* Initially hidden */
+    transition-property: opacity, transform; /* Transition properties */
+    transition-duration: 1s; /* Duration for the transition */
+}
+
+[data-aos].aos-animate {
+    opacity: 1; /* Fully visible when animated */
+    transform: translateY(0); /* Ensure it starts at the correct position */
+}
+
+[data-aos="fade-down"].aos-animate {
+    transform: translateY(20px); /* Move down for fade effect */
+}
+
+
+body{
+    overflow-x: hidden;
+    background-color: white;
+}
+.nav-bar {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #262835;
+    font-family: 'Oxanium', sans-serif;
+    position: fixed;
+    z-index: 9999;
+    border-top: 0%;
+    
+    
+    ;
+    
+}
+
+
+.logo {
+    clip-path: polygon(0 0, 70% 0, 100% 100%, 0% 100%);
+    background-color:  #e90181;
+    width: 100px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    padding-right: 50px;
+  
+}
+.logo img{
+    width: 20%;
+}
+
+.menu-containor {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    
+
+}
+
+
+
+.menu a{
+    color: white;
+    padding: 10px 25px;
+   
+    position: relative;
+    
+}
+.menu a:after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color:  #e90181;
+    transform: skewX(-20deg);
+    z-index: -1;
+    right: 0;
+    margin: 0 auto;
+    opacity: 0;
+}
+
+.menu a.active:before {
+    opacity: 1; /* Keep the pink background visible for the active link */
+}
+.menu a:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color:  #e90181;
+    transform: skewX(-20deg);
+    z-index: -1;
+    right: 0;
+    margin: 0 auto;
+    opacity: 0;
+}
+.menu a:hover:before{
+    opacity: 1;
+}
+
+
+.navbar-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding-right: 50px;
+}
+.navbar-icon i{
+    cursor: pointer;
+}
+
+
+.fa-magnifying-glass,.fa-basket-shopping,.fa-bars:hover{
+    padding: 20px;
+    background-color: #252634;
+    box-shadow: inset 7px 7px 7px rgba(0, 0, 0, 0.726) ;
+    border-radius: 10px;
+    transition: all .3s ease-in-out;
+}
+.fa-magnifying-glass:hover,.fa-basket-shopping:hover,.fa-bars{
+    transition: all .3s ease-in-out;
+    box-shadow: inset 1px 1px 7px rgba(0, 0, 0, 0.726) ;
+}
+
+.hero-image img {
+    transition: transform 0.5s ease-in-out;
+}
+
+.hero-image img:hover {
+    transform: rotate(10deg);
+}
+
+
+.hero{
+    height:auto;
+    width: 100%;
+    background-image: url(https://img.freepik.com/free-psd/gaming-blank-banner-background_23-2150390425.jpg?t=st=1728819884~exp=1728823484~hmac=08ea47d7c06c8ac37db16694ec1c090c3fb3012729ad90aae7fb6d939883e6a3&w=996);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 6%;
+    padding-top: 50px;
+    
+    height: 100vh;
+}
+
+.hero-contant{
+    color: white;
+    width: 50%;
+}
+.hero-contant h3{
+    margin-bottom: 10px;
+    position: relative;
+    animation: lazy 1s;
+}
+.hero-contant h3,h1 span{
+    color: #e90181;
+}
+.hero-contant h1,.hero-contant span{
+    font-family: 'Oxanium', sans-serif;
+    font-size: 80px;
+    font-weight: 1000;
+    line-height: 80px;
+    position: relative;
+    animation: lazy 2s;
+}
+
+.hero-contant h1 {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-in-out forwards;
+    animation-delay: 0.5s;
+}
+
+
+
+.hero-contant button {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-in-out forwards;
+    animation-delay: 0.9s;
+}
+
+.hero-contant p{
+    margin-top: 10px;
+    font-weight: 300;
+    margin-bottom: 50px;
+    position: relative;
+    animation: lazy 2s;
+}
+ button{
+    padding: 20px 50px;
+    background-color: #e90181;
+    font-weight: 700;
+    position: relative;
+    z-index: 3;
+    cursor: pointer;
+    clip-path: polygon(10% 0, 100% 0%, 90% 100%, 0% 100%);
+    animation: lazy 3s;
+}
+
+button:after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: -50%;
+    height: 300%;
+    width: 0;
+    rotate: 15deg;
+    background-color: whitesmoke;
+    transition: all .5s ease-in-out;
+    z-index: -1;
+}
+ button:hover{
+    background-color: transparent;
+    color: #e90181;
+}
+ button:hover:after{
+     width: 100%;
+     left: 0;
+}
+.hero-image{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.swiper {
+    width: 100%;
+    /* background-color: #000; */
+    display: flex;
+    align-items: center;
+  }
+  .mySwiper{
+    background: #000;
+  }
+
+  .swiper-slide {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    /* width: 100%; */
+    /* height: 150px !important; */
+  }
+
+  .swiper-slide img {
+    display: block;
+    /* width: 30%; */
+    object-fit: cover;
+    margin: auto;
+  }
+
+  .swiper {
+    margin-left: auto;
+    margin-right: auto;
+  }
+@keyframes rotate{
+    0%{
+        opacity: 0;
+        right: -50%;
+    }
+    100%{
+        opacity: 1;
+       right: 0;
+    }
+}
+
+
+html {
+    scroll-behavior: smooth;
+  }
+  
+
+
+.product {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-in-out forwards;
+    animation-delay: 1.0s;
+    
+}
+/* product */
+.product_wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ7yuj0bIujElxAm-yJgx1Tm-Oi-GQYD1mmQc7RCmSUIGPIIym);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+.product_main{
+    width: 70%;
+    padding: 80px 0;
+}
+.product {
+    width: 350px;
+    height: 280px;
+    color: white;
+    position: relative;
+    border-radius: 50px;
+}
+footer {
+    background-color:#000; /* Dark background */
+    color: #f8f9fa; /* Light text */
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: #f8f9fa;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #adb5bd;
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+footer .social-icons {
+    margin-top: 10px;
+}
+
+footer .social-icons a {
+    color: #f8f9fa;
+    margin: 0 10px;
+    font-size: 20px;
+}
+
+footer .social-icons a:hover {
+    color: #adb5bd;
+}
+
+.product span{
+    color: #e90181;
+}
+
+.btn {
+    position: absolute;
+    bottom: 100px;
+    left: 10%;
+    z-index: 3;
+    height: 30px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn h4{
+    position: relative;
+    z-index: 66;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.btn:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #e90181;
+    transform: skewX(-20deg);
+    margin: 0 auto;
+    z-index: 0;
+}
+
+.product1-contant {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #00000092;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.product1-contant p {
+    font-weight: 300;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.main_heading{
+    text-align: center;
+    font-size: 30px;
+    color: white;
+}
+.main_heading span{
+    color: #e9a401;
+}
+
+/* -- */
+@media (max-width:1400px) {
+    .logo {
+        width: 200px;
+    }
+    .menu a{
+        font-size: 14px;
+    }
+    .hero-contant h1,.hero-contant span{
+        font-size: 70px;
+        line-height: 70px;
+    }
+    .upcomming{
+        display: block;
+    }
+    .upcomming h1{
+        text-align: center;
+    }
+    .upcomming h1:after{
+        right: 30%;
+    }
+    .upcomming h1:before{
+        left: 30%;
+    }
+    .firstteam{
+        text-align: left;
+    }
+    .secondteam{
+        text-align: right;
+    }
+    .newsletter{
+        flex-direction: column;
+        gap: 20px;
+    }
+   
+}
+
+
+
+
+@keyframes lazy {
+    0%{
+        opacity: 0;
+        transform: translateX(-20%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+  /* Navbar Animation */
+  @keyframes navbarSlideIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Hero Section Animation */
+  @keyframes heroFadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Background Animation */
+  @keyframes backgroundFadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  
+/* Apply animations to the navbar, hero, and background */
+.nav-bar {
+    animation: navbarSlideIn 1s ease forwards; /* Navbar animation */
+  }
+  
+  .hero {
+    animation: heroFadeIn 1.5s ease forwards; /* Hero animation */
+    opacity: 0; /* Initial state to ensure it fades in */
+  }
+  
+  .product_wrapper {
+    animation: backgroundFadeIn 2s ease forwards; /* Background animation */
+    opacity: 0; /* Initial state to ensure it fades in */
+  }
+  
+  /* Ensuring the initial hidden state */
+ 
+  .progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background-color: #007bff;
+    z-index: 9999;
+  }
+  /* Sidebar styles */
+.sidebar {
+    height: 230px; /* Full height */
+    width: 0px; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    top: 80px;
+    right: 0; /* Sidebar slides in from the right */
+    background-color: #262835; /* Sidebar background color */
+    overflow-x: hidden; /* Disable horizontal scrolling */
+    transition: 0.5s; /* Smooth slide animation */
+
+}
+
+.sidebar a {
+    padding: 20px 15px;
+    text-decoration: none;
+   
+    color: #fff;
+    display: block;
+    font-size: 13px;
+    transition: 0.3s;
+    font-family: 'Oxanium', sans-serif;
+
+   
+}
+
+.sidebar a:hover {
+    background-color:  #e90181;
+  
+}
+
+
+/* Sidebar is visible when the 'open' class is added */
+.sidebar.open {
+    width: 100px; /* Sidebar width when open */
+}
+
+.navbar-icon {
+    cursor: pointer;
+}
+
+
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+
+/* Chrome, Edge, and Safari */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #007bff;
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #0056b3;
+  }
+  /* Example CSS animation */
+.animated {
+    animation: fadeIn 1s forwards; /* Adjust animation properties */
+}
+

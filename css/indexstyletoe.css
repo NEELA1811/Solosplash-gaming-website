@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+::selection{
+  color: #fff;
+  background:#e90181;
+}
+body{
+  background-image: url(https://cdn.pixabay.com/photo/2023/03/30/13/30/gate-7887737_960_720.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.select-box, .play-board, .result-box{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+}
+.select-box{
+  background: #fff;
+  padding: 20px 25px 25px;
+  border-radius: 5px;
+  max-width: 400px;
+  width: 100%;
+}
+.select-box.hide{
+  opacity: 0;
+  pointer-events: none;
+}
+.select-box header{
+  font-size: 30px;
+  font-weight: 600;
+  padding-bottom: 10px;
+  border-bottom: 1px solid lightgrey;
+}
+.select-box .title{
+  font-size: 22px;
+  font-weight: 500;
+  margin: 20px 0;
+}
+.select-box .options{
+  display: flex;
+  width: 100%;
+}
+.options button{
+  width:170px;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px 0;
+  border: none;
+  background: #e90181;
+  border-radius: 5px;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.options button:hover,
+.btn button:hover{
+  transform: scale(0.96);
+}
+.options button.playerX{
+  margin-right: 5px;
+}
+.options button.playerO{
+  margin-left: 5px;
+}
