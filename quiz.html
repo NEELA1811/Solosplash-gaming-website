@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game - API Project</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/quizstyle.css">
+</head>
+<body  style="background-image:url(qbg.jpg);background-repeat:no-repeat;background-size:cover"   class="bg-light d-flex align-items-center justify-content-center" style="min-height: 100vh;">
+    
+    <div class="wrapper">
+        <div class="quiz-container card shadow">
+            <div class="quiz-head card-header">
+                <h1 class="quiz-title"><a href="indexquiz.html"><img src="back btn.png" width="30"></a>Quiz Game</h1>
+                <div class="quiz-score text-right">
+                    <span id="correct-score"></span>/<span id="total-question"></span>
+                </div>
+            </div>
+            <div class="quiz-body card-body">
+                <h2 class="quiz-question" id="question"><!--What is the full form of HTTP? --></h2>
+                <ul class="quiz-options list-group">
+                    <!-- <li class="list-group-item">1. Hyper text transfer package</li>
+                    <li class="list-group-item">2. Hyper text transfer protocol</li>
+                    <li class="list-group-item">3. Hyphenation text test program</li>
+                    <li class="list-group-item">4. None of the above</li> -->
+                </ul>
+                <div id="result"></div>
+            </div>
+            <div class="quiz-foot card-footer">
+                <button type="button" class="btn btn-primary" id="check-answer">Check Answer</button>
+            
+                <button type="button" class="btn btn-secondary" id="play-again">Play Again!</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/quiz.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+body {    
+  background: url(signuplog.jpg) no-repeat center center fixed;
+  background-size: cover;
+
+}
+
+.card {
+  opacity: 1;
+  box-shadow: 10px 10px 5px rgb(80, 11, 77);
+  transition: transform 0.3s;
+  width: 350px;
+  margin: 100px auto; /* Center the card */
+}
+
+.card:hover {
+  transform: scale(1.02); /* Slightly enlarge card on hover */
+}
+
+.submitting {
+  opacity: 0.5; /* Make the form slightly transparent */
+  pointer-events: none; /* Disable pointer events */
+  transition: opacity 0.3s; /* Smooth transition for opacity */
+}
+
+#form {
+  padding: 20px;
+}
+
+@media screen and (max-width: 700px) {
+  .card {
+      width: 90%; /* Responsive width */
+  }
+}

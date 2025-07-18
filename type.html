@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>KeyStorm</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/type.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      </head>
+      <body background="https://media.gettyimages.com/id/1171564349/video/retro-land.jpg?s=640x640&k=20&c=UytoK5VuR3nXezFTIryRH6D4mHUE846zUBZhlIJA5cw=" style="background-repeat:no-repeat;background-size:cover">
+        <div class="container mt-5">
+          <div class="card shadow-sm">
+            <div class="card-header text-center bg-info text-white">
+                <h4>Typing Speed Test</h4><a href="indextype.html"><img src="back btn.png" style="margin-right:1000px;" width="30"></a>
+            </div>
+            <div class="card-body">
+              <!-- Input field (hidden) -->
+              <input type="text" class="input-field form-control" style="opacity: 0; position: absolute; z-index: -1;">
+
+      
+              <!-- Typing text section -->
+              <div class="typing-text mb-3">
+                <p></p>
+              </div>
+      
+              <!-- Result details wrapped in Bootstrap cards -->
+              <div class="row text-center">
+                <!-- Time Left -->
+                <div class="col-md-3 col-sm-6">
+                  <div class="card text-center mb-3">
+                    <div class="card-header bg-primary text-white">
+                      Time Left
+                    </div>
+                    <div class="card-body">
+                      <p class="card-text">
+                        <span><b>60</b>s</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+      
+                <!-- Mistakes -->
+                <div class="col-md-3 col-sm-6">
+                  <div class="card text-center mb-3">
+                    <div class="card-header bg-warning text-dark">
+                      Mistakes
+                    </div>
+                    <div class="card-body">
+                      <p class="card-text">
+                        <span>0</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+      
+                <!-- WPM -->
+                <div class="col-md-3 col-sm-6">
+                  <div class="card text-center mb-3">
+                    <div class="card-header bg-success text-white">
+                      WPM
+                    </div>
+                    <div class="card-body">
+                      <p class="card-text">
+                        <span>0</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+      
+                <!-- CPM -->
+                <div class="col-md-3 col-sm-6">
+                  <div class="card text-center mb-3">
+                    <div class="card-header bg-danger text-white">
+                      CPM
+                    </div>
+                    <div class="card-body">
+                      <p class="card-text">
+                        <span>0</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+      
+              <!-- Try Again Button -->
+              <div class="text-center mt-3">
+                <button class="btn btn-info">Try Again</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <script src="js/paragraphs.js"></script>
+        <script src="js/type.js"></script>
+      </body>
+      
+      
+</html>

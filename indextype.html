@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KeyStorm - Game Menu</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #282c34;
+            color: white;
+            font-family: Arial, sans-serif;
+            animation: fadeIn 1s;
+            margin-left: 300px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 3em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+            margin-right:300px ;
+        }
+
+        button {
+            margin: 10px;
+            transition: transform 0.3s, background-color 0.3s;
+            width: 50%; /* Width of the buttons */
+          
+        }
+
+        button:hover {
+            transform: scale(1.1);
+            background-color: #0069d9; /* Bootstrap primary color */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 10px;
+            font-size: 0.8em;
+            margin-right: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>KeyStorm</h1>
+    <div>
+        <button class="btn btn-primary btn-lg" onclick="startGame()">
+            <i class="fas fa-play"></i> Start Game
+        </button>
+        <button class="btn btn-secondary btn-lg" onclick="showHighScore()">
+            <i class="fas fa-trophy"></i> High Score
+        </button>
+        <button class="btn btn-info btn-lg" onclick="showAbout()">
+            <i class="fas fa-info-circle"></i> About
+        </button>
+        <button class="btn btn-danger btn-lg" onclick="goHome()">
+            <i class="fas fa-home"></i> Home
+        </button>
+    </div>
+    <div class="footer text-center">
+        <p>&copy; 2024 KeyStorm. All rights reserved.</p>
+    </div>
+
+    <script>
+        function startGame() {
+            window.location.href = 'type.html'; // Replace with your game page URL
+        }
+
+        function showHighScore() {
+            const highScore = localStorage.getItem("highScore") || 0; // Retrieve high score from local storage
+            alert("Current High Score: " + highScore); // Display high score in alert
+        }
+
+        function showAbout() {
+            alert("KeyStorm\n\nCreated by NEELA\n\nTest your skills with fun games!");
+        }
+
+        function goHome() {
+            window.location.href = 'index.php'; // Replace with your home page URL
+        }
+    </script>
+</body>
+</html>

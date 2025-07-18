@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Bird</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/flap.css">
+    <script src="js/flap.js" defer></script>
+    <style>
+        #homeButton {
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            z-index: 10; /* Ensure it appears above other elements */
+        }
+    </style>
+</head>
+<body>
+    <canvas id="board"></canvas>
+    <button id="homeButton" class="btn btn-primary" onclick="goHome()">Menu</button>
+
+    <script>
+        function goHome() {
+            // Logic to go back to home page
+            // You can change the URL as needed
+            window.location.href = 'indexflap.html'; // Replace 'home.html' with your home page URL
+        }
+    </script>
+</body>
+</html>

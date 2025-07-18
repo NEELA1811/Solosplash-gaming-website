@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Bird - Menu</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #282c34;
+            color: white;
+            font-family: Arial, sans-serif;
+            animation: fadeIn 1s;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 3em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        button {
+            margin: 10px;
+            transition: transform 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+            background-color: #0069d9; /* Bootstrap primary color */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 10px;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flappy Bird</h1>
+    <div>
+        <button class="btn btn-primary btn-lg" onclick="startGame()"><i class="fas fa-play"></i> Start Game</button>
+
+        <button class="btn btn-info btn-lg" onclick="showAbout()"><i class="fas fa-info-circle"></i> About</button>
+        <button class="btn btn-danger btn-lg" onclick="goHome()"><i class="fas fa-home"></i> Home</button>
+    </div>
+    <div class="footer text-center">
+        <p>&copy; 2024 Flappy Bird Game. All rights reserved.</p>
+    </div>
+
+    <script>
+        function startGame() {
+            window.location.href = 'flap.html'; // Replace with your game page URL
+        }
+      
+
+        function showAbout() {
+            alert("Flappy Bird Game\n\nCreated by NEELA\n\nUse Space or Arrow Up to jump.");
+        }
+
+        function goHome() {
+            window.location.href = 'index.php'; // Replace with your home page URL
+        }
+    </script>
+</body>
+</html>
